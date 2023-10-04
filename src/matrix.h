@@ -2,7 +2,7 @@
 //-----------------------------------------------------------------------------
 #include <map>
 //-----------------------------------------------------------------------------
-template <typename T, typename T default_value = T()>
+template <typename T, T default_value = T()>
 class Matrix
 {
 private:
@@ -24,7 +24,7 @@ private:
 
     public:
         using MatrixIterator = typename std::map<Key, T>::iterator;
-        
+
         Storage() : m_RowTemp(0), m_ColumnTemp(0) { };
         ~Storage() = default;
 
